@@ -4,7 +4,6 @@ div.lp {
 
 .lp-contents{
 	height: auto;
-    background-image: url("/app/views/devise/sessions/images/LP_top.jpg");
     background-size: 100% auto;
     background-position: center center;
 	background-size: cover;
