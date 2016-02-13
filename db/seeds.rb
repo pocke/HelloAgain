@@ -10,15 +10,16 @@
 # TODO: 各自追記
 users = [
   ['kuwabara@pocke.me', 'Masataka Kuwabara', 'http://graph.facebook.com/578185005679935/picture'],
-  ['fujiyama2017s@gmail.com', 'fshin'],
-  ['tatsuya.spre@gmail.com', 'spre'],
-  ['dango.umai@outlook.jp', 'mat'],
+  ['fujiyama2017s@gmail.com', 'fshin', ''],
+  ['tatsuya.spre@gmail.com', 'spre', ''],
+  ['dango.umai@outlook.jp', 'mat', ''],
 ]
 
-users = users.map do |email, name|
+users = users.map do |email, name, image|
   u = User.create!(
     email: email,
     name: name,
+    image: image,
     password: 'password',
   )
 
