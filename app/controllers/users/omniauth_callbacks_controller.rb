@@ -12,10 +12,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user.save!
 
     # Event に追加
-    ev = Event.first
-    ev.user_ids.push(@user.id)
-    ev.user_ids.uniq!
-    ev.save!
+    Event.all.each do |ev|
+      ev.user_ids.push(@user.id)
+      ev.user_ids.uniq!
+      ev.save!
+    end
 
     if @user.persisted?
       flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)

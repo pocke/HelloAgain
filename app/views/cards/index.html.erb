@@ -5,7 +5,7 @@
 <table>
 
   <tbody>
-    <% @cards.each do |card| %>
+    <% @cards.each.with_index do |card, idx| %>
       <tr>
 
         <td class="cards">
@@ -19,6 +19,11 @@
             <div id="email">E-mail: <%= card.user.email %> </div>
             <div id="tell">Tel: <%= card.phone %></div>
         </div>
+
+        <% if ev = @card_events[idx] %>
+          この人とは<%= time_ago_in_words ev.created_at %> 前に <%= ev.name  %> で会っています!
+        <% end %>
+        <div></div>
         </td>
 
       </tr>
