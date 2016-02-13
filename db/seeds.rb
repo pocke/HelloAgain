@@ -13,6 +13,7 @@ users = [
   ['fujiyama2017s@gmail.com', 'fshin', ''],
   ['tatsuya.spre@gmail.com', 'spre', ''],
   ['dango.umai@outlook.jp', 'mat', ''],
+  ['otoan.ikuzus@gamil.com', 'sinshutu', 'http://graph.facebook.com/193322427694624/picture'],
 ]
 
 users = users.map do |email, name, image|
