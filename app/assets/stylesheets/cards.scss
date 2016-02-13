@@ -2,18 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-td {
-    margin: 10px 10px;
-    padding: 10px;
+.frame {
+
 }
 
-
 .cards {
+    display:block;
     width: 91mm;
     height: 55mm;
-    margin: 10px 10px;
-    padding: 5px;
+    margin: 5px;
     border: thin solid #000000;
+
+}
+.hello_again {
+
+
 }
 .default {
 
