@@ -11,6 +11,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.find_for_oauth(request.env['omniauth.auth'])
     @user.save!
 
+    # Event に追加
+    ev = Event.first
+    ev.user_ids.push(@user.id)
+    ev.user_ids.uniq!
+    ev.save!
+
     if @user.persisted?
       flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)
       sign_in_and_redirect @user, event: :authentication

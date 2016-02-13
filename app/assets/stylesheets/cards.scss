@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+td {
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+
 .cards {
     width: 91mm;
     height: 55mm;
@@ -25,8 +31,8 @@
     #company {
         width: $text_length;
         height: 7mm;
-        margin: 2px 2px;
-        padding: 2px;
+        margin: 1px 2px;
+        padding: 1px;
 
         float: right;
     }
@@ -34,8 +40,8 @@
     #position {
         width: $text_length;
         height: 7mm;
-        margin: 2px 2px;
-        padding: 2px;
+        margin: 1px 2px;
+        padding: 1px;
 
         float: right;
 
@@ -47,6 +53,7 @@
         padding: 2px;
 
         font-size: 24px;
+        text-align: center;
 
         float: right;
     }
