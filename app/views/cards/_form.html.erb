@@ -13,8 +13,23 @@
 
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "名前" %><br />
     <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :affiliation, "所属(会社名)" %><br />
+    <%= f.text_field :affiliation, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone, "電話番号" %><br />
+    <%= f.text_field :phone, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :position, "役職" %><br />
+    <%= f.text_field :position, autofocus: true %>
   </div>
 
   <div class="actions">
