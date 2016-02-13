@@ -3,7 +3,8 @@ class CardsController < ApplicationController
 
   # GET /cards
   def index
-    @cards = Card.all
+    user_ids = Event.date(Time.zone.now).user_ids
+    @cards = user_ids.map{|x| User.find(x).card}
   end
 
   # GET /cards/1
@@ -22,6 +23,7 @@ class CardsController < ApplicationController
   # POST /cards
   def create
     @card = Card.new(card_params)
+    @card.user = current_user
 
     if @card.save
       redirect_to @card, notice: 'Card was successfully created.'
@@ -53,6 +55,6 @@ class CardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def card_params
-      params[:card]
+      params[:card].permit!
     end
 end
