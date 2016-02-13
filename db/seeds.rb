@@ -6,24 +6,36 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Event.create!(
-  name: 'HackDay', user_ids: [],
-)
 
-emails = %w[
-  kuwabara@pocke.me
-  fujiyama2017s@gmail.com
-  tatsuya.spre@gmail.com
-  dango.umai@outlook.jp
+users = [
+  ['kuwabara@pocke.me', 'Masataka Kuwabara'],
+  ['fujiyama2017s@gmail.com', 'fshin'],
+  ['tatsuya.spre@gmail.com', 'spre'],
+  ['dango.umai@outlook.jp', 'mat'],
 ]
 
-users = emails.map do |e|
-  User.create!(
-    email: e,
+users = users.map do |email, name|
+  u = User.create!(
+    email: email,
+    name: name,
     password: 'password',
   )
+
+  Card.create!(
+    user_id: u.id,
+    name: u.name,
+    affiliation: "Foo株式会社",
+    position: ["エンジニア", "プログラマ"],
+    phone: 'xxx-yyy-zzzz'
+  )
+  u
 end
 
+
+Event.create!(
+  name: 'HackDay',
+  user_ids: users.from(1).to(2).map(&:id),
+)
 
 ev = Event.create!(
   name: 'Hacker Wars',

@@ -4,9 +4,14 @@ class CardsController < ApplicationController
 
   # GET /cards
   def index
-    user_ids = Event.date(Time.zone.now).user_ids
-    @cards = user_ids.map{|x| User.find(x).card}
+    event = Event.date(Time.zone.now)
+    user_ids = event.user_ids
+    @cards = user_ids.map{|x| User.find(x).card}.compact
     id = current_user.id
+
+    @cards.sort_by do |card|
+      card.met?(event, current_user)
+    end
   end
 
   # GET /cards/1
