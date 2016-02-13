@@ -1,0 +1,139 @@
+/*テーマカラー
+#0dbcd9;
+#e7e7e7;*/
+
+.navbar-brand {
+  vertical-align: middle;
+}
+.nav li a{
+  padding: 5px 12px;
+}
+.dropdown{
+  font-size: 18px;
+  padding: 22px 0px;
+}
+.menu-alert{
+  padding: 20px 0px 0px 0px;
+}
+.container-fluid{
+  padding-right: 30px;
+    padding-left: 24px;a
+}
+.menu-icon{
+  padding: 4px 0px;
+}
+
+.side-nav{
+  float: left;
+  width: 200px; /* サイドバーの幅 */
+  background-color: #0dbcb9;
+}
+/*サイドバーのフォント*/
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #0dbcb9;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-bottom : 4px;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 12px dashed;
+  border-top: 18px solid \9;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.navbar-default {
+  background-color: #0dbcb9;
+  border-color: #e7e7e7;
+}
+
+.navbar-form{
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #66ccff;
+  background-color: transparent;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.container .navbar-brand{
+  padding:0px;
+  margin:15px 0px 0px 0px;
+}
+.form-group p {
+  margin:0px 0px -20px;
+}
+.form-group p a{
+  color: #fff;
+    font-size: 12px;
+}
+
+/*.panel-body .btn, .btn-sm, .btn-default:hover{
+  color: #fff;
+  background-color: #ffff00;
+  border-color: #fff;
+  }
+
+.panel-body .btn, .btn-sm, .btn-default{
+  color: #fff;
+  background-color: #FF9100 ;
+  border-color: #ffff66;
+  }*/
+
+.btn-default {
+  color: #fff;
+  background-color: #0dbcb9;
+  border-color: #66ffcc;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #00ffcc;
+  border-color: #fff;
+}
+
+.panel-heading .panel-title{
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-group-sm > .btn , .btn-sm {
+  font-size: 16px;
+  text-align: center;
+  }
+.policy{
+  margin-top: 3px;
+}
+
+.login-content .background{
+  background-size: cover;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: 0 center;
+  margin-bottom: 100px;
+}
+
+.panel-default > .panel-heading {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.register .navbar-brand{
+  padding-left:10000px ;
