@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  def new
+    
+  end
+
   def sign_in
     p = params.require(:user).permit(:email, :password)
     email, password = p[:email], p[:password]
@@ -9,7 +13,6 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = user.id
-    render json: user
   end
 
   def sign_up
@@ -22,6 +25,5 @@ class SessionsController < ApplicationController
 
     u = User.new(email: email, password: password)
     u.save!
-    render json: u
   end
 end
