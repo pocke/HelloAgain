@@ -16,6 +16,8 @@ class CardsController < ApplicationController
   # GET /cards/new
   def new
     @card = Card.new
+    @card.name = current_user.name
+    @card.image = current_user.image
   end
 
   # GET /cards/1/edit
