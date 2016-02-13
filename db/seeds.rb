@@ -17,6 +17,7 @@ Event.create(
 emails = %w[
   kuwabara@pocke.me
   fujiyama2017s@gmail.com
+  tatsuya.spre@gmail.com
 ]
 
 users = emails.map do |e|
