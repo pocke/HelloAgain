@@ -9,19 +9,7 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = user.id
-    token = SecureRandom.hex(32)
-    session[:csrf_token] = token
-
-    meta = {
-      status: true,
-      csrf_token: token,
-      message: 'ログインが完了しました',  # TODO: I18n
-    }
-
-    opt = render_option(user, status: 200)
-    opt[:meta] = meta
-
-    render opt
+    render json: user
   end
 
   def sign_up
@@ -29,10 +17,11 @@ class SessionsController < ApplicationController
     email, password = p[:email], p[:password]
 
     if User.exists?(email: email)
-      raise "User #{email} is exist"
+      raise "#{email} は既に存在します!"
     end
 
     u = User.new(email: email, password: password)
     u.save!
+    render json: u
   end
 end
