@@ -1,3 +1,4 @@
+# coding: utf-8
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -12,7 +13,7 @@ users = [
   ['kuwabara@pocke.me', 'Masataka Kuwabara', 'http://graph.facebook.com/578185005679935/picture'],
   ['fujiyama2017s@gmail.com', 'fshin', ''],
   ['tatsuya.spre@gmail.com', 'spre', ''],
-  ['dango.umai@outlook.jp', 'mat', ''],
+  ['dango.umai@outlook.jp', 'mat', 'http://graph.facebook.com/974806872605290/picture'],
   ['otoan.ikuzus@gamil.com', 'sinshutu', 'http://graph.facebook.com/193322427694624/picture'],
 ]
 
