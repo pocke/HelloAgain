@@ -1,3 +1,13 @@
+body{
+	font: 18px/1.7 Arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo","メイリオ","ＭＳ Ｐゴシック",Helvetica,Sans-Serif;
+}
+
+h1{
+font-size: 28px;
+    line-height: 56px;
+    font-weight: bold;
+    color: #2e5077;
+}
 .header{
 	background-color: #2e5077;
 	height: 60px;
@@ -39,4 +49,25 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	display: block;
 	text-align: center;
 	border: 0;
+}
+
+.illust{
+    display: block;
+    text-align: center;
+}
+.illust img{
+	float: none;
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+.illust p{
+    font-size: 20px;
+    line-height: 40px;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.sentence{
+	margin: 0 48px;
 }
