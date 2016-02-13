@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Event.create(
+Event.create!(
   name: 'HackDay', user_ids: [],
 )
 
@@ -18,15 +18,16 @@ emails = %w[
 ]
 
 users = emails.map do |e|
-  User.create(
+  User.create!(
     email: e,
     password: 'password',
   )
 end
 
 
-Event.create(
+ev = Event.create!(
   name: 'Hacker Wars',
   user_ids: users.to(2).map(&:id),
-  created_at: 100.days.ago,
 )
+ev.created_at = 100.days.ago
+ev.save!
