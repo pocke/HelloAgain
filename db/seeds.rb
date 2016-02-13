@@ -25,7 +25,7 @@ users = users.map do |email, name|
     user_id: u.id,
     name: u.name,
     affiliation: "Foo株式会社",
-    position: ["エンジニア", "プログラマ"],
+    position: ["エンジニア", "プログラマ"].sample,
     phone: 'xxx-yyy-zzzz'
   )
   u

@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem 'rails-i18n'
+gem 'devise-i18n'
 
 gem 'mongoid'
 gem 'mongoid-geospatial'

@@ -10,9 +10,7 @@
 
         <td class="cards">
         <div class="default">
-            <div id="face_image" >
-                <img src="<%= card.image %>" />
-            </div>
+            <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
             <div id="company"><%= card.affiliation %></div>
             <div id="position"><%= card.position %></div>
             <div id="name" ><%= card.name %></div>
