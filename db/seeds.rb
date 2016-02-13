@@ -7,8 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+# TODO: 各自追記
 users = [
-  ['kuwabara@pocke.me', 'Masataka Kuwabara'],
+  ['kuwabara@pocke.me', 'Masataka Kuwabara', 'http://graph.facebook.com/578185005679935/picture'],
   ['fujiyama2017s@gmail.com', 'fshin'],
   ['tatsuya.spre@gmail.com', 'spre'],
   ['dango.umai@outlook.jp', 'mat'],
