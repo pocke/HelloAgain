@@ -3,11 +3,13 @@
 <h1>Listing Cards</h1>
 
 <div class="frame">
-    <% @cards.each do |card| %>
+    <% @cards.each.with_index do |card, idx| %>
 
         <div class="cards">
         <div class="default">
-            <div id="face_image" >顔写真</div>
+            <div id="face_image" >
+                <img src="<%= card.image %>" />
+            </div>
             <div id="company"><%= card.affiliation %></div>
             <div id="position"><%= card.position %></div>
             <div id="name" ><%= card.name %></div>
@@ -16,12 +18,12 @@
         </div>
         </div>
 
-
+        <% if ev = @card_events[idx] %>
+          この人とは<%= time_ago_in_words ev.created_at %> 前に <%= ev.name  %> で会っています!
+        <% end %>
 
     <% end %>
 </div>
 
-
 <br>
-
 <%= link_to 'New Card', new_card_path %>
