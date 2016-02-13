@@ -1,59 +1,59 @@
 <div class="container">
-    <p id="notice"><%= notice %></p>
-
-    <ul class="frame">
-        <div class="row">
-            <% @cards.each.with_index do |card, idx| %>
-                <div class="col-sm-6 col-md-4">
-                    <% if ev = @card_events[idx] %>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">この人とは<%= time_ago_in_words ev.created_at %> 前に <%= ev.name  %> で会っています!</h3>
-                            </div>
-                     <% else %>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><p>はじめまして!!<br></p></h3>
-                            </div>
-                     <% end %>
-                            <div class="panel-body">
-                                <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
-                                <div class="company">
-                                    <div id="company"><%= card.affiliation %></div>
-                                    <div id="position"><%= card.position %></div>
-                                </div>
-                                <div class="info">
-                                    <div id="name" ><%= card.name %></div>
-                                    <div id="email">E-mail: <%= card.user.email %> </div>
-                                    <div id="tell">Tel: <%= card.phone %></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <p id="notice"><%= notice %></p>
+  
+  <ul class="frame">
+    <div class="row">
+      <% @cards.each.with_index do |card, idx| %>
+      <div class="col-sm-6 col-md-4">
+        <% if ev = @card_events[idx] %>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">この人とは<%= time_ago_in_words ev.created_at %> 前に <%= ev.name  %> で会っています!</h3>
+          </div>
+          <% else %>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><p>はじめまして!!<br></p></h3>
+            </div>
             <% end %>
-                </div>
-    </ul>
-
-    <ul class="frame">
-        <div class="row">
-            <% @cards_not_exist.each.with_index do |card, idx| %>
-                <div class="col-sm-6 col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body" style="background-color:#555">
-                            <img id="face_image" src="<%= card.user.image %>?width=100&height=100" style="opacity:0.3"/>
-                            <div class="company">
-                                <div id="company"><%= card.affiliation %></div>
-                                <div id="position"><%= card.position %></div>
-                            </div>
-                            <div class="info">
-                                <div id="name" ><%= card.name %></div>
-                                <div id="email">E-mail: <%= card.user.email %> </div>
-                                <div id="tell">Tel: <%= card.phone %></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <% end %>
+            <div class="panel-body">
+              <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
+              <div class="company">
+                <div id="company"><%= card.affiliation %></div>
+                <div id="position"><%= card.position %></div>
+              </div>
+              <div class="info">
+                <div id="name" ><%= card.name %></div>
+                <div id="email">E-mail: <%= card.user.email %> </div>
+                <div id="tell">Tel: <%= card.phone %></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </ul>
+        <% end %>
+      </div>
+  </ul>
+  
+  <ul class="frame">
+    <div class="row">
+      <% @cards_not_exist.each.with_index do |card, idx| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body" style="background-color:#555">
+            <img id="face_image" src="<%= card.user.image %>?width=100&height=100" style="opacity:0.3"/>
+            <div class="company">
+              <div id="company"><%= card.affiliation %></div>
+              <div id="position"><%= card.position %></div>
+            </div>
+            <div class="info">
+              <div id="name" ><%= card.name %></div>
+              <div id="email">E-mail: <%= card.user.email %> </div>
+              <div id="tell">Tel: <%= card.phone %></div>
+            </div>
+          </div>
         </div>
+      </div>
+      <% end %>
+    </div>
+  </ul>
+  </div>
