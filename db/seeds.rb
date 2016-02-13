@@ -6,4 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Event.find_or_create_by(name: 'HackDay', user_ids: [])
+Event.create(
+  name: 'HackDay', user_ids: [],
+)
+
+Event.create(
+  name: 'Hacker Wars',
+)
+
+emails = %w[
+  kuwabara@pocke.me
+]
+
+users = emails.map do |e|
+  User.create(
+    email: e,
+    password: 'password',
+  )
+end
+
+
+Event.create(
+  name: 'Hacker Wars',
+  user_ids: users.to(2).map(&:id),
+)
