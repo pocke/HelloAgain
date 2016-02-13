@@ -28,4 +28,5 @@ end
 Event.create(
   name: 'Hacker Wars',
   user_ids: users.to(2).map(&:id),
+  created_at: 100.days.ago,
 )
