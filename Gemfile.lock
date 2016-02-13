@@ -194,6 +194,7 @@ DEPENDENCIES
   jquery-rails
   mongoid
   mongoid-geospatial
+  omniauth
   omniauth-facebook
   pry
   pry-rails
