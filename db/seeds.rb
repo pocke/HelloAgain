@@ -10,10 +10,6 @@ Event.create(
   name: 'HackDay', user_ids: [],
 )
 
-Event.create(
-  name: 'Hacker Wars',
-)
-
 emails = %w[
   kuwabara@pocke.me
   fujiyama2017s@gmail.com

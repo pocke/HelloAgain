@@ -6,6 +6,7 @@ class CardsController < ApplicationController
   def index
     user_ids = Event.date(Time.zone.now).user_ids
     @cards = user_ids.map{|x| User.find(x).card}
+    id = current_user.id
   end
 
   # GET /cards/1
