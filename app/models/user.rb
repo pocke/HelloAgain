@@ -25,6 +25,10 @@ class User
 	field :last_sign_in_ip,    type: String
 
 	# for Facebook
+	field :name,     type: String
+	field :affiliation,     type: String
+	field :phone,     type: String
+	field :image,     type: String
 	field :uid,      type: String
 	field :provider, type: String
 
@@ -42,17 +46,19 @@ class User
 	# field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
 	# field :unlock_token,    type: String # Only if unlock strategy is :email or :both
 	# field :locked_at,       type: Time
-	def self.find_for_oauth(auth)
-		user = User.where(uid: auth.uid, provider: auth.provider).first
+    def self.find_for_oauth(auth)
+        user = User.where(uid: auth.uid, provider: auth.provider).first
 
-		unless user
-			user = User.create(
-				uid:      auth.uid,
-				provider: auth.provider,
-				email:    User.dummy_email(auth),
-				password: Devise.friendly_token[0, 20]
-			)
-		end
+        unless user
+            user = User.create(
+                uid:      auth.uid,
+                name:      auth.info.name,
+                image: auth.info.image,
+                provider: auth.provider,
+                email:    User.dummy_email(auth),
+                password: Devise.friendly_token[0, 20]
+            )
+        end
 
 		user
 	end
