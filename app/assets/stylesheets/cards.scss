@@ -11,51 +11,63 @@
 }
 .default {
 
+    $text_length: 58mm;
+
     #face_image {
         width: 25mm;
         height: 25mm;
         margin: 5px 5px;
         padding: 5px;
         border: thin solid #000000;
+        float: left;
     }
 
     #company {
-        width: 45mm;
+        width: $text_length;
         height: 7mm;
         margin: 2px 2px;
         padding: 2px;
-        border: thin solid #000000;
+
+        float: right;
     }
 
     #position {
-        width: 45mm;
+        width: $text_length;
         height: 7mm;
         margin: 2px 2px;
         padding: 2px;
-        border: thin solid #000000;
+
+        float: right;
+
     }
     #name {
-        width: 45mm;
+        width: $text_length;
         height: 7mm;
         margin: 2px 2px;
         padding: 2px;
-        border: thin solid #000000;
+
+        font-size: 24px;
+
+        float: right;
     }
 
 
-    #mail {
-        width: 45mm;
+    #email {
+        width: $text_length;
         height: 7mm;
         margin: 2px 2px;
         padding: 2px;
-        border: thin solid #000000;
+
+        float: right;
     }
 
     #tell {
-        width: 45mm;
+        width: $text_length;
         height: 7mm;
         margin: 2px 2px;
         padding: 2px;
-        border: thin solid #000000;
+
+        float: right;
+
     }
 }
