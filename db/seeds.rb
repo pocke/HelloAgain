@@ -18,6 +18,7 @@ emails = %w[
   kuwabara@pocke.me
   fujiyama2017s@gmail.com
   tatsuya.spre@gmail.com
+  dango.umai@outlook.jp
 ]
 
 users = emails.map do |e|
