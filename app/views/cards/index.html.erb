@@ -2,13 +2,10 @@
 
 <h1>Listing Cards</h1>
 
-<table>
-
-  <tbody>
+<div class="frame">
     <% @cards.each do |card| %>
-      <tr>
 
-        <td class="cards">
+        <div class="cards">
         <div class="default">
             <div id="face_image" >顔写真</div>
             <div id="company"><%= card.affiliation %></div>
@@ -17,12 +14,13 @@
             <div id="email">E-mail: <%= card.user.email %> </div>
             <div id="tell">Tel: <%= card.phone %></div>
         </div>
-        </td>
+        </div>
 
-      </tr>
+
+
     <% end %>
-  </tbody>
-</table>
+</div>
+
 
 <br>
 

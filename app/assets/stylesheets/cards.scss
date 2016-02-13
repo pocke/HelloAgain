@@ -2,19 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-td {
-    margin: 10px 10px;
-    padding: 10px;
+.frame {
+  border-collapse: separate;
+  border-spacing: 3px 0;
+  display: table;
+  width: 100%;
 }
-
-
 .cards {
-    width: 91mm;
-    height: 55mm;
-    margin: 10px 10px;
-    padding: 5px;
-    border: thin solid #000000;
+  display: table-cell;
+  vertical-align: middle;
 }
+
+
 .default {
 
     $text_length: 58mm;
@@ -22,7 +21,7 @@ td {
     #face_image {
         width: 25mm;
         height: 25mm;
-        margin: 5px 5px;
+        margin: 5px;
         padding: 5px;
         border: thin solid #000000;
         float: left;
