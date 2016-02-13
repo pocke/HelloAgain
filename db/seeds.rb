@@ -12,7 +12,7 @@
 users = [
   ['kuwabara@pocke.me', 'Masataka Kuwabara', 'http://graph.facebook.com/578185005679935/picture'],
   ['fujiyama2017s@gmail.com', 'fshin', ''],
-  ['tatsuya.spre@gmail.com', 'spre', ''],
+  ['tatsuya.spre@gmail.com', 'spre', 'http://graph.facebook.com/794757477323182/picture'],
   ['dango.umai@outlook.jp', 'mat', 'http://graph.facebook.com/974806872605290/picture'],
   ['otoan.ikuzus@gamil.com', 'sinshutu', 'http://graph.facebook.com/193322427694624/picture'],
 ]
