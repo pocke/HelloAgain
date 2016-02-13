@@ -26,7 +26,7 @@ class CardsController < ApplicationController
     @card.user = current_user
 
     if @card.save
-      redirect_to @card, notice: 'Card was successfully created.'
+      redirect_to cards_path
     else
       render :new
     end
