@@ -4,6 +4,11 @@ class CardsController < ApplicationController
 
   # GET /cards
   def index
+    if !current_user.card
+      redirect_to new_card_path
+      return
+    end
+
     event = Event.date(Time.zone.now)
     user_ids = event.user_ids
     cards = user_ids.map{|x| User.find(x).card}.compact
