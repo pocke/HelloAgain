@@ -36,5 +36,6 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'spring'
+  gem 'quiet_assets'
 end
 
