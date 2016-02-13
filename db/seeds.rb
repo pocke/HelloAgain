@@ -38,7 +38,7 @@ end
 
 Event.create!(
   name: 'HackDay',
-  user_ids: users.map(&:id),
+  user_ids: users.from(1).map(&:id),
 )
 
 ev = Event.create!(

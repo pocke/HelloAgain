@@ -14,6 +14,14 @@ class CardsController < ApplicationController
     end
 
     @card_events = @cards.map{|x| x.met?(event, current_user)}
+
+
+    # 過去に会ったけど今いない人
+    ids = Event.where(user_ids: current_user.id).map{|x| x.user_ids}.flatten.uniq
+    @cards_not_exist = User.all.to_a
+      .select{|x| ids.include? x.id}
+      .reject{|x| user_ids.include? x.id }
+      .map{|x| x.card}
   end
 
   # GET /cards/1
