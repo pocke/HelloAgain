@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'mongoid'
 gem 'mongoid-geospatial'
 gem 'highline'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
