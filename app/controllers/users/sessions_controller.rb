@@ -9,6 +9,8 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super
+
+    # Location をセーブ
     l = params.require(:user)[:location].split(',')
     lat = l[0]
     lng = l[1]
@@ -18,6 +20,11 @@ class Users::SessionsController < Devise::SessionsController
       lng: lng,
     }
     current_user.save!
+
+    # Event に追加
+    ev = Event.first
+    ev.user_ids.push(current_user.id)
+    ev.save!
   end
 
   # DELETE /resource/sign_out

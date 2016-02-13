@@ -4,4 +4,5 @@ class Event
   include Mongoid::Attributes::Dynamic
 
   field :name,  type: String, default: ""
+  field :user_ids, type: Array, default: []
 end
