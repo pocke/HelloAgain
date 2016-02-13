@@ -8,9 +8,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    # Event に追加
+    ev = Event.first
+    ev.user_ids.push(current_user.id)
+    ev.user_ids.uniq!
+    ev.save!
+  end
 
   # GET /resource/edit
   # def edit

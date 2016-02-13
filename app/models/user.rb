@@ -24,6 +24,10 @@ class User
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
 
+  # for Facebook
+  field :uid,      type: String
+  field :provider, type: String
+
   has_one :card
 
   field :location,  type: Point, spatial: true, delegate: true
