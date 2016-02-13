@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    
+    @user =
   end
 
   def sign_in
