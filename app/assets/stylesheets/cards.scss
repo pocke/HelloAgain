@@ -25,8 +25,8 @@
     #company {
         width: $text_length;
         height: 7mm;
-        margin: 2px 2px;
-        padding: 2px;
+        margin: 1px 2px;
+        padding: 1px;
 
         float: right;
     }
@@ -34,8 +34,8 @@
     #position {
         width: $text_length;
         height: 7mm;
-        margin: 2px 2px;
-        padding: 2px;
+        margin: 1px 2px;
+        padding: 1px;
 
         float: right;
 
@@ -47,6 +47,7 @@
         padding: 2px;
 
         font-size: 24px;
+        text-align: center;
 
         float: right;
     }
