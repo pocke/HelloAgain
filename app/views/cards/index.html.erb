@@ -3,42 +3,45 @@
 <h2>今いる人</h2>
 
 <ul class="frame">
+  <div class="row">
     <% @cards.each.with_index do |card, idx| %>
-
-    <li class="cards">
-        <div class="default">
-            <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
-            <div id="company"><%= card.affiliation %></div>
-            <div id="position"><%= card.position %></div>
-            <div id="name" ><%= card.name %></div>
-            <div id="email">E-mail: <%= card.user.email %> </div>
-            <div id="tell">Tel: <%= card.phone %></div>
-        </div>
-    </li>
-    <div class="hello_again">
+    <div class="col-sm-6 col-md-4">
+      <div class="panel panel-default">
+	<div class="panel-body">
+	  <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
+          <div id="company"><%= card.affiliation %></div>
+          <div id="position"><%= card.position %></div>
+          <div id="name" ><%= card.name %></div>
+          <div id="email">E-mail: <%= card.user.email %> </div>
+          <div id="tell">Tel: <%= card.phone %></div>
+	</div>
+      </div>
+      <div class="hello_again">
         <% if ev = @card_events[idx] %>
-          この人とは<%= time_ago_in_words ev.created_at %> 前に <%= ev.name  %> で会っています!
+        この人とは<%= time_ago_in_words ev.created_at %> 前に <%= ev.name  %> で会っています!
         <% end %>
+      </div>
     </div>
-
     <% end %>
-
+  </div>
 </ul>
 
 <h2>今いないけど過去に会った人</h2>
 <ul class="frame">
+  <div class="row">
     <% @cards_not_exist.each.with_index do |card, idx| %>
-
-    <li class="cards">
-        <div class="default">
-            <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
-            <div id="company"><%= card.affiliation %></div>
-            <div id="position"><%= card.position %></div>
-            <div id="name" ><%= card.name %></div>
-            <div id="email">E-mail: <%= card.user.email %> </div>
-            <div id="tell">Tel: <%= card.phone %></div>
-        </div>
-    </li>
-
+    <div class="col-sm-6 col-md-4">
+      <div class="panel panel-default">
+	<div class="panel-body">
+	  <img id="face_image" src="<%= card.user.image %>?width=100&height=100" />
+          <div id="company"><%= card.affiliation %></div>
+          <div id="position"><%= card.position %></div>
+          <div id="name" ><%= card.name %></div>
+          <div id="email">E-mail: <%= card.user.email %> </div>
+          <div id="tell">Tel: <%= card.phone %></div>
+	</div>
+      </div>
+    </div>
     <% end %>
+  </div>
 </ul>
