@@ -2,16 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.cards {
+    width: 91mm;
+    height: 55mm;
+    margin: 10px 10px;
+    padding: 5px;
+    border: thin solid #000000;
+}
+.default {
 
-    .cards {
-        width: 91mm;
-        height: 55mm;
-        margin: 10px 10px;
-        padding: 5px;
-        border: thin solid #000000;
-    }
-
-    .cards #face_image {
+    #face_image {
         width: 25mm;
         height: 25mm;
         margin: 5px 5px;
@@ -19,10 +19,43 @@
         border: thin solid #000000;
     }
 
-    .cards #name {
+    #company {
         width: 45mm;
         height: 7mm;
         margin: 2px 2px;
         padding: 2px;
         border: thin solid #000000;
     }
+
+    #position {
+        width: 45mm;
+        height: 7mm;
+        margin: 2px 2px;
+        padding: 2px;
+        border: thin solid #000000;
+    }
+    #name {
+        width: 45mm;
+        height: 7mm;
+        margin: 2px 2px;
+        padding: 2px;
+        border: thin solid #000000;
+    }
+
+
+    #mail {
+        width: 45mm;
+        height: 7mm;
+        margin: 2px 2px;
+        padding: 2px;
+        border: thin solid #000000;
+    }
+
+    #tell {
+        width: 45mm;
+        height: 7mm;
+        margin: 2px 2px;
+        padding: 2px;
+        border: thin solid #000000;
+    }
+}

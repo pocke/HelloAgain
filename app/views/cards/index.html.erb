@@ -12,14 +12,18 @@
   <tbody>
     <% @cards.each do |card| %>
       <tr>
+
         <td class="cards">
+        <div class="default">
             <div id="face_image" >顔写真</div>
             <div id="company">会社名</div>
             <div id="position">役職名</div>
             <div id="name" >氏名</div>
             <div id="mail">メールアドレス</div>
             <div id="tell">電話番号</div>
+        </div>
         </td>
+
         <td><%= link_to 'Show', card %></td>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
         <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
