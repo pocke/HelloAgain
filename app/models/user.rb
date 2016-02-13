@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  include Mongoid::Geospatial
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -24,6 +25,8 @@ class User
   field :last_sign_in_ip,    type: String
 
   has_one :card
+
+  field :location,  type: Point, spatial: true, delegate: true
 
   ## Confirmable
   # field :confirmation_token,   type: String
