@@ -8,10 +8,11 @@ class Card
   field :position, type: String, default: ""
   belongs_to :user
 
-  def met(current_event, current_user)
+  def met?(current_event, current_user)
     evs = Event.all
     evs.reject!{|e| e.id == current_event.id }
       .select!{|e| e.user_ids.include? current_user.id }
       .select!{|x| e.user_ids.include? self.user.id }
+    evs.first
   end
 end
