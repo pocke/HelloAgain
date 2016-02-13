@@ -7,17 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+	<li>
+	  <% if current_user %>
+	  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+	  <% end %>
+	</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  </header>
 <div class="container">
-
-  <%= yield %>
-
-
   <div>
     <% if current_user %>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
     <% end %>
   </div>
+  <%= yield %>
+
+
+
 
 </div>
 
