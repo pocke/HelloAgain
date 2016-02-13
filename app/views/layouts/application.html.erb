@@ -11,7 +11,7 @@
       <div class="container">
         <div class="navar navbar-header">
           <a href="../" class="navbar-brand">
-	    <%= image_tag("logo_02.png", class: 'fb-btn') -%>
+	    <%= image_tag("logo_02.png", class: 'fb-btn', id: "logo") -%>
 	  </a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
@@ -33,15 +33,13 @@
       </div>
     </div>
 
-    <div class="page-header" id="banner">a </div>
+    <div class="page-header" id="banner"></div>
 
-<div class="container">
   <%= yield %>
 
 
 
 
-</div>
 
 
 </body>

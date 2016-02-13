@@ -22,4 +22,17 @@ div.lp {
 	text-align: center;
 	border: 0;
 }
-
+#logo{
+	height: 40px;
+    float: left;
+}
+#face_image{
+    font-size: 50px;
+    float:left
+}
+.company{
+    font-size: 20px;
+}
+.info{
+    clear:both;
+}
