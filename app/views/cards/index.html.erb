@@ -16,11 +16,11 @@
         <td class="cards">
         <div class="default">
             <div id="face_image" >顔写真</div>
-            <div id="company">会社名</div>
-            <div id="position">役職名</div>
-            <div id="name" >氏名</div>
-            <div id="mail">メールアドレス</div>
-            <div id="tell">電話番号</div>
+            <div id="company"><%= card.affiliation %></div>
+            <div id="position"><%= card.position %></div>
+            <div id="name" ><%= card.name %></div>
+            <div id="mail">E-mail: <%= card.user.email %></div>
+            <div id="tell">Tel: <%= card.phone %></div>
         </div>
         </td>
 
