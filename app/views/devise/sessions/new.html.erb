@@ -1,20 +1,14 @@
-<!-- header -->
-<div class="header">
-    <a href="#"><img src="./images/logo_02.png"></a>
-</div>
-
 <!-- contents -->
-<div class="contents">
+<div class="lp-contents">
     <div class="center-contents">
-        <!--<img src="./images/top_logo.png">-->
+        <%= image_tag("top_logo.png") %>
         <div class="fb-btn">
-            <a href="#">
-                <!--<img src="./images/facebook.png">-->
+            <a href="<%= user_omniauth_authorize_path(:facebook) -%>">
+                <%= image_tag("facebook.png"), class: 'fb-btn'  -%>
             </a>
         </div>
     </div>
 </div>
-<%= link_to 'fb signIn', user_omniauth_authorize_path(:facebook), class: 'btn btn-primary' -%>
 <!-- footer -->
 <div class="footer">
 </div>
