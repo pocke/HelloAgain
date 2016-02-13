@@ -1,0 +1,42 @@
+.header{
+	background-color: #2e5077;
+	height: 60px;
+	background-size: cover;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+.header img{
+	height: 40px;
+    margin: 10px 0 0 30px;
+    float: left;
+}
+
+.div {
+    display: block;
+}
+
+.contents{
+	height: auto;
+    background-image: url("/app/views/devise/sessions/images/LP_top.jpg");
+    background-size: 100% auto;
+    background-position: center center;
+	background-size: cover;
+    text-align: center;
+}
+.contents img{
+	width: 80%;
+	margin: 30px auto;
+	border: 0;
+}
+
+.fb-btn{
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	border: 0;
+}
