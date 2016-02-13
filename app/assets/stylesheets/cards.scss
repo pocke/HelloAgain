@@ -3,24 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .frame {
-  border-collapse: separate;
-  border-spacing: 3px 0;
-  display: table;
-  width: 100%;
+
 }
+
 .cards {
-  display: table-cell;
-  vertical-align: middle;
+    display:block;
+    width: 91mm;
+    height: 55mm;
+    margin: 5px;
+    border: thin solid #000000;
+
 }
+.hello_again {
 
 
+}
 .default {
 
     $text_length: 58mm;
 
     #face_image {
-        width: 25mm;
-        height: 25mm;
+        width: 100px;
+        height: 100px;
         margin: 5px;
         padding: 5px;
         border: thin solid #000000;
