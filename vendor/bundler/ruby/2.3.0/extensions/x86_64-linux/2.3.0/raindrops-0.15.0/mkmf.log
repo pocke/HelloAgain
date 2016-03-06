@@ -1,0 +1,282 @@
+have_func: checking for mmap() in sys/mman.h... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/mman.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))mmap; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for munmap() in sys/mman.h... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/mman.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))munmap; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for mremap() in sys/mman.h... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/mman.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))mremap; return !p; }
+/* end */
+
+--------------------
+
+have_header: checking for linux/tcp.h... -------------------- yes
+
+"gcc -E -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <linux/tcp.h>
+/* end */
+
+--------------------
+
+have_func: checking for getpagesize() in unistd.h... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -D_BSD_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <unistd.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))getpagesize; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -D_BSD_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+conftest.c: 関数 ‘t’ 内:
+conftest.c:13:57: エラー: ‘rb_thread_blocking_region’ が宣言されていません (この関数内での最初の使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+                                                         ^
+conftest.c:13:57: 備考: 未宣言の識別子は出現した各関数内で一回のみ報告されます
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -D_BSD_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+/tmp/ccvfEngq.o: 関数 `t' 内:
+conftest.c:(.text+0x7): `rb_thread_blocking_region' に対する定義されていない参照です
+collect2: エラー: ld はステータス 1 で終了しました
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_thread_blocking_region();
+14: int t(void) { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_io_blocking_region()... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -D_BSD_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+conftest.c: 関数 ‘t’ 内:
+conftest.c:13:57: エラー: ‘rb_thread_io_blocking_region’ が宣言されていません (この関数内での最初の使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_io_blocking_region; return !p; }
+                                                         ^
+conftest.c:13:57: 備考: 未宣言の識別子は出現した各関数内で一回のみ報告されます
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_io_blocking_region; return !p; }
+/* end */
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -D_BSD_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_thread_io_blocking_region();
+14: int t(void) { rb_thread_io_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+checking for GCC 4+ atomic builtins... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-2.3.0/x86_64-linux -I/usr/include/ruby-2.3.0/ruby/backward -I/usr/include/ruby-2.3.0 -I. -D_FORTIFY_SOURCE=2   -D_GNU_SOURCE  -D_BSD_SOURCE  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-O1,--sort-common,--as-needed,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic     -lruby  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from conftest.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: int main(int argc, char * const argv[]) {
+ 4:         unsigned long i = 0;
+ 5:         __sync_lock_test_and_set(&i, 0);
+ 6:         __sync_lock_test_and_set(&i, 1);
+ 7:         __sync_bool_compare_and_swap(&i, 0, 1);
+ 8:         __sync_add_and_fetch(&i, argc);
+ 9:         __sync_sub_and_fetch(&i, argc);
+10:         return 0;
+11: }
+/* end */
+
+--------------------
+

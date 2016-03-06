@@ -1,0 +1,64 @@
+#!/usr/bin/env ruby
+#
+# Just for fun
+#
+$LOAD_PATH << File.expand_path('../../lib', __FILE__)
+
+require 'mongoid/geospatial'
+
+Mongoid.configure do |config|
+  config.connect_to('mongoid_geospatial_bench')
+end
+
+Mongoid::Geospatial.with_georuby!
+Mongoid::Geospatial.with_rgeo!
+
+class NoGeo
+  include Mongoid::Document
+  field :name
+end
+
+class Rider
+  include Mongoid::Document
+  include Mongoid::Geospatial
+  field :name
+end
+
+class Cafe
+  include Mongoid::Document
+  include Mongoid::Geospatial
+  field :name
+  field :spot, type: Point
+end
+
+Mongoid.purge!
+# [NoGeo, Rider, Cafe].each(&:delete_all)
+
+Benchmark.bmbm do |b|
+  [100, 1000, 3000].each do |t|
+    nogeo = []
+    cafes = []
+    b.report("#{t} W NoGeo") do
+      t.times { nogeo << NoGeo.create(name: 'Boring').id }
+    end
+    b.report("#{t} W Rider") { t.times { Rider.create(name: 'Munro') } }
+
+    b.report("#{t} W Cafe ") do
+      t.times { cafes << Cafe.create(name: 'Bacco', spot: [3, 3]).id }
+    end
+    # puts "---"
+    b.report("#{t} R NoGeo") { nogeo.each { |id| NoGeo.find(id) } }
+    # b.report("#{t} R Rider") { t.times { Rider.create(name: 'Munro') } }
+    b.report("#{t} R Cafe ") { cafes.each { |id| Cafe.find(id) } }
+    b.report("#{t} R Cafe Georuby") { cafes.each { |id| Cafe.find(id).spot.to_geo } }
+    b.report("#{t} R Cafe RGeo") { cafes.each { |id| Cafe.find(id).spot.to_rgeo } }
+  end
+  b.report('R Cafe GeoRuby') do
+    cafe = Cafe.first
+    1_000_000.times { cafe.spot.to_geo }
+  end
+  b.report('R Cafe RGeo') do
+    cafe = Cafe.first
+    1_000_000.times { cafe.spot.to_rgeo }
+  end
+end

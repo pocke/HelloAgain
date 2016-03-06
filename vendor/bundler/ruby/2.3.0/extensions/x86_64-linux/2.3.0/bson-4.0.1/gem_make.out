@@ -1,0 +1,25 @@
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/bson-4.0.1/ext/bson
+/usr/bin/ruby -r ./siteconf20160306-14325-18seump.rb extconf.rb
+creating Makefile
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/bson-4.0.1/ext/bson
+make "DESTDIR=" clean
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/bson-4.0.1/ext/bson
+make "DESTDIR="
+compiling native.c
+In file included from native.c:21:0:
+native-endian.h:113:17: 警告: ‘__bson_uint32_swap_slow’ が定義されましたが使用されません [-Wunused-function]
+ static uint32_t __bson_uint32_swap_slow(uint32_t v)
+                 ^
+native-endian.h:137:17: 警告: ‘__bson_uint64_swap_slow’ が定義されましたが使用されません [-Wunused-function]
+ static uint64_t __bson_uint64_swap_slow(uint64_t v)
+                 ^
+native-endian.h:164:15: 警告: ‘__bson_double_swap_slow’ が定義されましたが使用されません [-Wunused-function]
+ static double __bson_double_swap_slow(double v)
+               ^
+linking shared-object native.so
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/bson-4.0.1/ext/bson
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 native.so ./.gem.20160306-14325-1whayex

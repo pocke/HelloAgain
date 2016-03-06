@@ -1,0 +1,15 @@
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+/usr/bin/ruby -r ./siteconf20160306-14325-5msoum.rb extconf.rb
+creating Makefile
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20160306-14325-xryys7

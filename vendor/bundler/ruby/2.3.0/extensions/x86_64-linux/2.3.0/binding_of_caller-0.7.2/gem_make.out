@@ -1,0 +1,16 @@
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/usr/bin/ruby -r ./siteconf20160306-14325-6pdhqz.rb extconf.rb
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** ターゲット 'clean' を make するルールがありません.  中止.
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

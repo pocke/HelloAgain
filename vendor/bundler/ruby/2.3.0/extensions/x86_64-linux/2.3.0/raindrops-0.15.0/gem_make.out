@@ -1,0 +1,53 @@
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/raindrops-0.15.0/ext/raindrops
+/usr/bin/ruby -r ./siteconf20160306-14325-lwqvhm.rb extconf.rb
+checking for mmap() in sys/mman.h... yes
+checking for munmap() in sys/mman.h... yes
+checking for mremap() in sys/mman.h... yes
+checking for linux/tcp.h... yes
+checking for getpagesize() in unistd.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_io_blocking_region()... yes
+checking for GCC 4+ atomic builtins... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/extensions/x86_64-linux/2.3.0/raindrops-0.15.0/mkmf.log
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/raindrops-0.15.0/ext/raindrops
+make "DESTDIR=" clean
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/raindrops-0.15.0/ext/raindrops
+make "DESTDIR="
+compiling linux_tcp_info.c
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from linux_tcp_info.c:2:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+compiling linux_inet_diag.c
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from linux_inet_diag.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+compiling raindrops.c
+In file included from /usr/include/stdio.h:27:0,
+                 from /usr/include/ruby-2.3.0/ruby/defines.h:26,
+                 from /usr/include/ruby-2.3.0/ruby/ruby.h:29,
+                 from /usr/include/ruby-2.3.0/ruby.h:33,
+                 from raindrops.c:1:
+/usr/include/features.h:148:3: 警告: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^
+linking shared-object raindrops_ext.so
+
+current directory: /home/suzuki/works/website/HelloAgain/vendor/bundler/ruby/2.3.0/gems/raindrops-0.15.0/ext/raindrops
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 raindrops_ext.so ./.gem.20160306-14325-pmdn5h
